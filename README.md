@@ -23,6 +23,8 @@ $ chmod +x pdfocr.sh\
 And run with:\
 $ ./pdfocr.sh
 
+## Warning
 
-TODO:
-Temporary directories of intermediate pdf and png files are left in place presently while in development. Change code to delete these directories once happy with finished PDF files.
+This script deletes the original PDF files and replces them with the OCR versions.
+
+TODO: Refine settings to reduce file sizes.
