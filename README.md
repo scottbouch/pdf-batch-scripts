@@ -18,10 +18,11 @@ Place pdfocr.sh in a directory of PDFs, either copy manually, use git clone, or 
 wget https://github.com/scottbouch/pdfocr-batch/raw/refs/heads/main/pdfocr.sh \
 \
 Make executable with:\
-chmod +x pdfocr.sh
+$ chmod +x pdfocr.sh\
 \
 And run with:\
-./pdfocr.sh
+$ ./pdfocr.sh
 
 
-(Temporary directories of intermediate pdf and png files are left in place presently while in development. Delete these directories once happy with finished PDF files)
+TODO:
+Temporary directories of intermediate pdf and png files are left in place presently while in development. Change code to delete these directories once happy with finished PDF files.
