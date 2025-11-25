@@ -4,7 +4,7 @@ Linux BASH
 
 ## Prerequisite packages
 
-Prerequisite packages are listed in the script comments.\
+Prerequisite packages are listed in the script comments.
 
 ## Running guidance
 
