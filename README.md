@@ -29,6 +29,9 @@ TODO: Refine settings to reduce file sizes.
 Batch process a directory of JPGs, combine to a single PDF with OCR layer.\
 Linux BASH
 
+# pdfappend.sh
+Batch process a directory of PDFs, append another PDF to the end, randomly selected from an /append directory.\
+Linux BASH
 
 # pdfnoindex.sh
 Batch process a directory of PDFs, removes index bookmarks - handy after splitting a big PDF into smaller chunks.\
