@@ -71,4 +71,7 @@ done
   # Delete output directory
   rmdir output
 
-echo -e "> Finished!\n> Remenber to delete or move the pdfocr.sh file!"
+  # Delete this file
+  rm pdfocr.sh
+
+echo -e "> Finished!!"
