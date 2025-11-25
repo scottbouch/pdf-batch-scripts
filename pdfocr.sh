@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# File shared at https://github.com/scottbouch/pdfocr-batch 
+
+# Prerequisite packages
+# Prerequisite packages to use this script, some of these will already be included in desktop distributions, for Ubuntu Server I had to install all:
+#
+# pdftk
+# libpng-dev libjpeg-dev libtiff-dev
+# imagemagick
+# poppler-utils
+# tesseract
+
+
 # Set a more descriptive variable name
 PDF_FILES=$(find . -name "*.pdf")
 
