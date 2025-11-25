@@ -15,7 +15,7 @@ tesseract
 ## Running guidance
 
 Place pdfocr.sh in a directory of PDFs, either copy manually, use git clone, or use the wget command such as:\
-wget https://github.com/scottbouch/pdfocr-batch/raw/refs/heads/main/pdfocr.sh \
+$ wget https://github.com/scottbouch/pdfocr-batch/raw/refs/heads/main/pdfocr.sh \
 \
 Make executable with:\
 $ chmod +x pdfocr.sh\
