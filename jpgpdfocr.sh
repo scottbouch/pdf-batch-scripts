@@ -1,36 +1,36 @@
 #!/bin/bash
 
-# OCR character recognises all .JPG images in a directory and creates a single pdf
+# OCR all .jpg images in a directory and combine them into a single PDF
 
-# Create a list of file names
-JPG_FILES=$(find . -name "*.jpg")
+# Find JPG files and sort them in natural numeric order
+JPG_FILES=$(find . -maxdepth 1 -type f -iname "*.jpg" | sort -V)
 
-# Create the output directory if it doesn't exist
 mkdir -p ocrpdf
+mkdir -p output
 
-  # Process each page
-  for PAGE_FILE in $JPG_FILES; do
-    # Extract the filename without the .jpg extension
+echo "> Starting OCR process..."
+
+# OCR each JPG
+for PAGE_FILE in $JPG_FILES; do
     PAGE_BASE_NAME=$(basename "$PAGE_FILE" .jpg)
 
-    echo "> OCR analysing JPG: $PAGE_BASE_NAME and saving PDF of page"
+    echo "> OCR analysing JPG: $PAGE_BASE_NAME"
 
-    # OCR png file and produce PDF
-    tesseract "$PAGE_BASE_NAME.jpg" "ocrpdf/$PAGE_BASE_NAME" pdf
-  done
+    tesseract "$PAGE_FILE" "ocrpdf/$PAGE_BASE_NAME" pdf
+done
 
-  echo "> Merging all pages of $BASE_NAME back together"
+echo "> OCR complete. Merging PDFs..."
 
-  # Find OCR PDF files to be merged back to multi-page documents
-  # Use find with -print0 and xargs -0 to handle spaces in filenames correctly
-  MERGE_FILES=$(find "$BASE_NAME/png/ocrpdf" -name "*.pdf" -print0 | sort -z | xargs -0)
+# Natural-sort the PDF files too
+OCR_PDFS=$(ls ocrpdf/*.pdf 2>/dev/null | sort -V)
 
-  # Unite pages to pdf as per the original pdf files, name the output pdf files as per original files. Save to output directory
-  # Use quotes around variables to handle spaces in filenames correctly
-  if [[ -n "$MERGE_FILES" ]]; then
-    pdfunite $MERGE_FILES "output/${BASE_NAME}.pdf"
-  else
-    echo "No OCR files found for merging in $BASE_NAME/png/ocrpdf"
-  fi
+if [[ -z "$OCR_PDFS" ]]; then
+    echo "Error: No OCR PDFs found to merge."
+    exit 1
+fi
 
-echo -e "> Finished!\n> Remenber to delete or move the jpgpdfocr.sh file!"
+OUTPUT="output/combined.pdf"
+pdfunite $OCR_PDFS "$OUTPUT"
+
+echo "> Done! Combined PDF saved as: $OUTPUT"
+
