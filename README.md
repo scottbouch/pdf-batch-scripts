@@ -17,7 +17,10 @@ $ ./pdfocr.sh
 Batch process a directory of plain PDFs, to PDFs with OCR layer.
 
 # jpgpdfocr.sh
-Batch process a directory of JPGs, combine to a single PDF with OCR layer.
+Batch process a directory of JPGs, combine to a single PDF with OCR layer.\
+Dependencies:\
+sudo apt install tesseract-ocr\
+sudo apt install poppler-utils
 
 # pdfappend.sh
 Batch process a directory of PDFs, append another PDF to the end, randomly selected from an /append directory.
