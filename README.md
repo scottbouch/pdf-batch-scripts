@@ -5,13 +5,13 @@ All Linux BASH. Prerequisite packages are listed in the script comments. Origina
 ## Running guidance
 
 Place file such as pdfoccr.sh in a directory of PDFs, either copy manually, use git clone, or use the wget command such as:\
-$ wget https://github.com/scottbouch/pdfocr-batch/raw/refs/heads/main/pdfocr.sh \
+$ `wget https://github.com/scottbouch/pdfocr-batch/raw/refs/heads/main/pdfocr.sh` \
 \
 Make executable with:\
-$ chmod +x pdfocr.sh\
+`$ chmod +x pdfocr.sh`\
 \
 And run with:\
-$ ./pdfocr.sh
+`$ ./pdfocr.sh`
 
 # pdfocr.sh
 Batch process a directory of plain PDFs, to PDFs with OCR layer.
@@ -19,8 +19,8 @@ Batch process a directory of plain PDFs, to PDFs with OCR layer.
 # jpgpdfocr.sh
 Batch process a directory of JPGs, combine to a single PDF with OCR layer.\
 Dependencies:\
-sudo apt install tesseract-ocr\
-sudo apt install poppler-utils
+`$ sudo apt install tesseract-ocr`\
+`$ sudo apt install poppler-utils`
 
 # pdfappend.sh
 Batch process a directory of PDFs, append another PDF to the end, randomly selected from an /append directory.
