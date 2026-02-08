@@ -5,7 +5,9 @@
 # .root/root.pdf's
 # .root/append/appendage.pdf's
 
-APPEND_DIR="./append"
+USERNAME="${SUDO_USER:-$USER}"
+HOMEDIR=$(eval echo "~$USERNAME")
+APPEND_DIR="$HOMEDIR/Documents/append"
 
 # Check if append directory exists
 if [ ! -d "$APPEND_DIR" ]; then

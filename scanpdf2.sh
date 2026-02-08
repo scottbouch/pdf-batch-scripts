@@ -17,7 +17,7 @@ echo
 case "$SIZE_CHOICE" in
     1) X_SIZE=220; Y_SIZE=300; echo "Selected: A4 feeder" ;; # Allowed 10mm extra width, and 3mm extra height
     2) X_SIZE=152; Y_SIZE=216; echo "Selected: 6\" x 8.5\" feeder" ;;
-    3) X_SIZE=216; Y_SIZE=279; echo "Selected: 8.5\" x 11\" feeder" ;;
+    3) X_SIZE=220; Y_SIZE=281; echo "Selected: 8.5\" x 11\" feeder" ;; # paper is 216 x 279, but allowrd extra
     *) echo "Invalid choice"; exit 1 ;;
 esac
 
