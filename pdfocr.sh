@@ -75,6 +75,7 @@ echo "> Final tidy up"
 mv output/* .
 rmdir output
 
+# Remove copy of script from working directory
 rm -- "$0"
 
 echo -e "> Finished!!"

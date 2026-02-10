@@ -49,5 +49,8 @@ for ROOT_FILE in "${ROOT_FILES[@]}"; do
     echo "Appended and updated: $ROOT_FILE"
 done
 
+# Remove copy of script from working directory
+rm -- "$0"
+
 echo "Batch processing completed."
 
