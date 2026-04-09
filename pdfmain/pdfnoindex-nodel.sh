@@ -43,7 +43,5 @@ done
 # Clean up temporary directory
 rm -rf noindex
 
-# CHANGED: Self-delete script
-rm -- "$0"
 
-echo -e "> Finished!\n> Original files replaced and script removed."
+echo -e "> Finishedremoving indexes"
