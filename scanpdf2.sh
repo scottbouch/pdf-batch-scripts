@@ -10,7 +10,7 @@ PDF_NAME="${PDF_NAME%.pdf}"
 
 [[ -z "$PDF_NAME" ]] && { echo "PDF filename cannot be empty."; exit 1; }
 
-echo -e "Select scan size:\n1 = A4 feeder\n2 = 6\" x 8.5\" feeder\n3 = 8.5\" x 11\" feeder"
+echo -e "Select scan size:\n1 = A4 feeder\n2 = 6\" x 8.5\" feeder\n3 = 7.25\" x 9.75\" feeder\n4 = 8.5\" x 11\" feeder"
 read -n1 -p "Choice: " SIZE_CHOICE
 echo
 
@@ -18,7 +18,7 @@ case "$SIZE_CHOICE" in
     1) X_SIZE=220; Y_SIZE=300; echo "Selected: A4 feeder" ;; # Allowed 10mm extra width, and 3mm extra height
     2) X_SIZE=152; Y_SIZE=216; echo "Selected: 6\" x 8.5\" feeder" ;;
     3) X_SIZE=190; Y_SIZE=250; echo "Selected: 7.25\" x 9.75\" feeder" ;; # rounded up.
-    3) X_SIZE=220; Y_SIZE=281; echo "Selected: 8.5\" x 11\" feeder" ;; # paper is 216 x 279, but allowrd extra
+    4) X_SIZE=220; Y_SIZE=281; echo "Selected: 8.5\" x 11\" feeder" ;; # paper is 216 x 279, but allowrd extra
     *) echo "Invalid choice"; exit 1 ;;
 esac
 
