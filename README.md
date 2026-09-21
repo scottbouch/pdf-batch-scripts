@@ -24,11 +24,25 @@ Dependencies:\
 
 # pdfappend.sh
 Batch process a directory of PDFs, append another PDF to the end, randomly selected from an /append directory.
+Dependencies:\
+`sudo apt install pdftk`\
+`sudo apt install imagemagick`\
+`sudo apt install poppler-utils`\
+`sudo apt install  tesseract-ocr`
 
 # pdfappendsub.sh
 Similar to padappend, but includes all .pdf files found in sub-directories too.
 
 # pdfnoindex.sh
 Batch process a directory of PDFs, removes index bookmarks - handy after splitting a big PDF into smaller chunks.\
+
+# pdfmain.sh
+Calls other files from pdfmain directory to process PDFs, these files do not self-delete. Copy pdfmain.sh to PDF working directory and execute there. Other scripts need to be in /home/(user)/Documents/pdf-batch-scripts/pdfmain
+Dependencies:\
+`sudo apt install pdftk`\
+`sudo apt install imagemagick`\
+`sudo apt install poppler-utils`\
+`sudo apt install  tesseract-ocr`
+
 \
 TODO: Refine settings of ocr scripts to reduce file sizes.
