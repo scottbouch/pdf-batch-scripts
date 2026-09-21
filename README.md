@@ -42,7 +42,7 @@ Dependencies:\
 `sudo apt install pdftk`\
 `sudo apt install imagemagick`\
 `sudo apt install poppler-utils`\
-`sudo apt install  tesseract-ocr`
+`sudo apt install tesseract-ocr`
 
 \
 TODO: Refine settings of ocr scripts to reduce file sizes.
