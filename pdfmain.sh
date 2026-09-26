@@ -12,4 +12,3 @@ echo "Compressing PDF"
 rm -- "$0"
 
 echo "Everything is finished"
-
